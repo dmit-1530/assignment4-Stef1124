@@ -1,3 +1,127 @@
-body {
-    background-color: #eee;
+/* Global Variables */
+
+:root {
+    --cyan-900: #006064;
+    --hover: #0714cc;
+    --grey-50: #eceff1;
+    --grey-100: #cfd8dc;
+    --grey-900: #263238;
+    --box-shadow: 10px 10px 19px 0px rgba(236, 239, 241, 1);
+    --font-family: "Manrope", sans-serif;
 }
+
+
+body {
+    color: #666F74;
+    font-family: "Manrope", sans-serif;
+}
+
+svg {
+    width: 1rem;
+}
+/* Utility classes */
+.inner-container {
+    max-width: 65rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.main-menu {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+}
+h1 {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    color: #727B81
+}
+h1 span{
+    color: #0A91DE;
+}
+p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+
+}
+.main-menu,
+.sub-menu {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.125rem;
+    
+}
+.main-menu li {
+    position: relative;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+}
+a {
+    color: var(--cyan-900);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+a:hover,
+a:focus {
+    color: var(--hover);
+    text-decoration: underline;
+}
+svg {
+    fill: white;
+    stroke: var(--cyan-900);
+}
+header {
+    border-bottom: 1px solid var(--grey-100);
+    padding: 0.25rem 1rem;
+}
+.main-menu li a {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-weight: 600;
+}
+.sub-menu {
+    position: relative;
+    left: 7rem;
+    top: -1.5rem;
+    border: 1px solid var(--grey-900);
+    background-color: #fff;
+    min-width: 10.875rem;
+    box-shadow: var(--grey-900);
+    padding: 1.125rem;
+    z-index: 1;
+    visibility: visible;
+    opacity: 1;
+    
+}
+.sub-menu li {
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+}
+.sub-menu li:last-of-type {
+border-bottom: none;
+}
+.sub-menu li:hover a,
+.main-menu li:hover svg path {
+    color: var(--hover);
+    stroke: var(--hover);
+    fill: white;
+}
+.main-menu li:hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
+}
+
